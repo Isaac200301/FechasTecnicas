@@ -9,14 +9,14 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-import java.time.LocalDate;
+
 
 public class LecturaArchivo {
 
     private final String path;
     private ArrayList<String[]> lineas = new ArrayList<>();
     private ArrayList<String> nombres = new ArrayList<>();
-    OperacionesFechas gestionFechas= new OperacionesFechas();
+    
 
     public LecturaArchivo(String path) {
         this.path = path;
@@ -93,27 +93,5 @@ public class LecturaArchivo {
         return persona[6];
     }
 
-    public int personasNacidasAñoBisiesto() {
-        int i=0;
-        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
-            String linea;
-            
-            while ((linea = br.readLine()) != null) {
-                String[] lineaj = linea.split(",");
-                LocalDate fechaNacimientoj= gestionFechas.formatoFechas(getFechaNacimiento(lineaj));
-                if (gestionFechas.esBisiesto(fechaNacimientoj) && gestionFechas.isBetween(fechaNacimientoj, gestionFechas.formatoFechas(gestionFechas.añoInicio), gestionFechas.formatoFechas(gestionFechas.añoFin))){
-                    if (gestionFechas.estaEntreMesDia(fechaNacimientoj)){
-                        i++;
-                        
-                    }
-                    
-                }
-            }
-            
-        } catch (IOException e) {
-            e.printStackTrace();
-        }finally{
-            return i;
-        }
-    }
+    
 }

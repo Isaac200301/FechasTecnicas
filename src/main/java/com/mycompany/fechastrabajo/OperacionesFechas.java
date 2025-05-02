@@ -4,13 +4,9 @@
  */
 package com.mycompany.fechastrabajo;
 
-import java.time.DayOfWeek;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.time.LocalTime;
 import java.time.MonthDay;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.temporal.ChronoUnit;
 
@@ -35,30 +31,30 @@ public class OperacionesFechas {
     public LocalDate formatoFechas(String fecha) {
         if (fecha.equals(" ")) {
             return null;
-        }else{
-        DateTimeFormatter formatoParaParsear = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        LocalDate fechaParseada = LocalDate.parse(fecha, formatoParaParsear);
-        return fechaParseada;
+        } else {
+            DateTimeFormatter formatoParaParsear = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+            LocalDate fechaParseada = LocalDate.parse(fecha, formatoParaParsear);
+            return fechaParseada;
         }
     }
 
     public long daysBetween(LocalDate fecha, LocalDate fecha1) {
 
         long dias = ChronoUnit.DAYS.between(fecha1, fecha);
-        System.out.println("Días entre las fechas: " + dias);
+
         return dias;
     }
 
     public long monthsBetween(LocalDate fecha, LocalDate fecha1) {
 
         long meses = ChronoUnit.MONTHS.between(fecha1, fecha);
-        System.out.println("Meses entre las fechas: " + meses);
+
         return meses;
     }
 
     public long yearsBetween(LocalDate fecha, LocalDate fecha1) {
         long años = ChronoUnit.YEARS.between(fecha1, fecha);
-        System.out.println("Años entre las fechas: " + años);
+
         return años;
     }
 
@@ -67,10 +63,9 @@ public class OperacionesFechas {
         LocalDateTime dateTime2 = fecha.atStartOfDay();
 
         long segundos = ChronoUnit.SECONDS.between(dateTime1, dateTime2);
-        System.out.println("Segundos entre las fechas: " + segundos);
+
         return segundos;
     }
-
 
     public boolean esBisiesto(LocalDate fecha) {
         return fecha.isLeapYear();
