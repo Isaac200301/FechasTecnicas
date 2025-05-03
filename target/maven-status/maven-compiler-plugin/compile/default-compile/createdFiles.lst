@@ -1,11 +1,11 @@
 com\mycompany\fechastrabajo\FechasTrabajo.class
-com\mycompany\fechastrabajo\OperacionesFechas.class
 com\mycompany\fechastrabajo\GUI$5.class
-com\mycompany\fechastrabajo\GUI$3.class
 com\mycompany\fechastrabajo\GUI$1.class
 com\mycompany\fechastrabajo\GUI$7.class
-com\mycompany\fechastrabajo\GUI.class
 com\mycompany\fechastrabajo\LecturaArchivo.class
 com\mycompany\fechastrabajo\GUI$2.class
 com\mycompany\fechastrabajo\GUI$6.class
+com\mycompany\fechastrabajo\OperacionesFechas.class
+com\mycompany\fechastrabajo\GUI$3.class
+com\mycompany\fechastrabajo\GUI.class
 com\mycompany\fechastrabajo\GUI$4.class

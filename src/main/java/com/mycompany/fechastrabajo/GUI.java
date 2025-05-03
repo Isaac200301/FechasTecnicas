@@ -89,7 +89,7 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tw Cen MT Condensed Extra Bold", 1, 18)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("  ");
         jLabel3.setDebugGraphicsOptions(javax.swing.DebugGraphics.FLASH_OPTION);
